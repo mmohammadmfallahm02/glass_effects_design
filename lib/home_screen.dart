@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -53,6 +54,59 @@ class HomeScreen extends StatelessWidget {
                       color: Colors.grey.withOpacity(0.1),
                       borderRadius:
                           const BorderRadius.all(Radius.circular(25))),
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(25, 10, 25, 30),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                  margin: const EdgeInsets.only(top: 40),
+                                  child: Image.asset(
+                                    'assets/h.png',
+                                    width: 70,
+                                    height: 70,
+                                  )),
+                              SvgPicture.asset(
+                                'assets/visa.svg',
+                                color: Colors.white,
+                                width: 60,
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          const Expanded(
+                            child: Text(
+                              '6216 6102 0001 6587 010',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.w100,
+                                  wordSpacing: 3),
+                            ),
+                          ),
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                '02/12',
+                                style: TextStyle(
+                                    fontSize: 15, color: Colors.white),
+                              ),
+                              Text(
+                                'GZX',
+                                style: TextStyle(
+                                    fontSize: 15, color: Colors.white),
+                              )
+                            ],
+                          )
+                        ]),
+                  ),
                 ),
               ),
             ),
