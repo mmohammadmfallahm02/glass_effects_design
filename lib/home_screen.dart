@@ -12,6 +12,23 @@ class HomeScreen extends StatelessWidget {
       body: Stack(
         children: [
           Positioned(
+              left: -220,
+              bottom: -200,
+              child: Container(
+                width: 400,
+                height: 400,
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: const Color(0xff8369de).withOpacity(0.1),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Color(0xff8369de),
+                        spreadRadius: 90,
+                        blurRadius: 100,
+                      )
+                    ]),
+              )),
+          Positioned(
               top: 130,
               left: 220,
               child: Container(
