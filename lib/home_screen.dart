@@ -27,16 +27,19 @@ class HomeScreen extends StatelessWidget {
           Positioned(
               bottom: 250,
               right: 150,
-              child: Container(
-                width: 180,
-                height: 180,
-                decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    gradient: LinearGradient(colors: [
-                      Color(0xff744ff9),
-                      Color(0xff8369de),
-                      Color(0xff8da0cb)
-                    ])),
+              child: Transform.rotate(
+                angle: 8,
+                child: Container(
+                  width: 180,
+                  height: 180,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      gradient: LinearGradient(colors: [
+                        Color(0xff744ff9),
+                        Color(0xff8369de),
+                        Color(0xff8da0cb)
+                      ])),
+                ),
               )),
           Center(
             child: ClipRRect(
